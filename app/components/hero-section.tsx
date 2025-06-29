@@ -135,7 +135,7 @@ export default function HeroSection() {
           </motion.div>
         </motion.div>
 
-        {/* Right Content - Profile Image with Gold Frame */}
+        {/* Right Content - Profile Image with Refined Gold Frame */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -143,18 +143,18 @@ export default function HeroSection() {
           className="relative flex justify-center"
         >
           <div className="relative">
-            {/* Outer Gold Glow */}
-            <div className="absolute -inset-8 bg-gradient-to-r from-yellow-400/30 via-yellow-500/40 to-yellow-600/30 rounded-full blur-2xl animate-pulse" />
+            {/* Subtle Outer Glow */}
+            <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400/20 via-yellow-500/25 to-yellow-600/20 rounded-full blur-xl" />
             
             {/* Gold Frame Container */}
             <div className="relative">
-              {/* Ornate Gold Frame */}
-              <div className="absolute -inset-6 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 rounded-full p-1 shadow-2xl shadow-yellow-500/50">
+              {/* Elegant Gold Frame */}
+              <div className="absolute -inset-3 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 rounded-full p-1 shadow-xl shadow-yellow-500/30">
                 {/* Inner frame detail */}
-                <div className="absolute inset-2 bg-gradient-to-br from-yellow-300 via-yellow-400 to-yellow-500 rounded-full">
+                <div className="absolute inset-1 bg-gradient-to-br from-yellow-300 via-yellow-400 to-yellow-500 rounded-full">
                   {/* Frame pattern */}
-                  <div className="absolute inset-1 bg-gradient-to-br from-yellow-500 via-yellow-600 to-yellow-700 rounded-full">
-                    <div className="absolute inset-1 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 rounded-full" />
+                  <div className="absolute inset-0.5 bg-gradient-to-br from-yellow-500 via-yellow-600 to-yellow-700 rounded-full">
+                    <div className="absolute inset-0.5 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 rounded-full" />
                   </div>
                 </div>
               </div>
@@ -162,7 +162,7 @@ export default function HeroSection() {
               {/* Portrait Image */}
               <motion.div
                 whileHover={{ scale: 1.02 }}
-                className="relative z-10 w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-yellow-400/50 shadow-2xl"
+                className="relative z-10 w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-2 border-yellow-400/50 shadow-2xl"
               >
                 <img
                   src="/Untitled design (4).png"
@@ -173,29 +173,23 @@ export default function HeroSection() {
                 {/* Inner glow overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
               </motion.div>
-              
-              {/* Decorative corner elements */}
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-80 animate-pulse" />
-              <div className="absolute -top-4 -right-4 w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-60 animate-pulse" style={{ animationDelay: '0.5s' }} />
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-60 animate-pulse" style={{ animationDelay: '1s' }} />
-              <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-80 animate-pulse" style={{ animationDelay: '1.5s' }} />
             </div>
             
-            {/* Floating Gold Particles */}
+            {/* Small Floating Gold Particles */}
             <motion.div
-              animate={{ y: [0, -15, 0], rotate: [0, 180, 360] }}
+              animate={{ y: [0, -10, 0], rotate: [0, 180, 360] }}
               transition={{ duration: 4, repeat: Infinity }}
-              className="absolute -top-8 -right-8 w-4 h-4 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-70"
+              className="absolute -top-6 -right-6 w-2 h-2 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-70"
             />
             <motion.div
-              animate={{ y: [0, 15, 0], rotate: [360, 180, 0] }}
+              animate={{ y: [0, 10, 0], rotate: [360, 180, 0] }}
               transition={{ duration: 3.5, repeat: Infinity, delay: 1 }}
-              className="absolute -bottom-8 -left-8 w-3 h-3 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-60"
+              className="absolute -bottom-6 -left-6 w-1.5 h-1.5 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-60"
             />
             <motion.div
-              animate={{ x: [0, 20, 0], y: [0, -10, 0] }}
+              animate={{ x: [0, 15, 0], y: [0, -8, 0] }}
               transition={{ duration: 5, repeat: Infinity, delay: 2 }}
-              className="absolute top-1/2 -right-12 w-2 h-2 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-50"
+              className="absolute top-1/2 -right-8 w-1 h-1 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-50"
             />
           </div>
         </motion.div>
