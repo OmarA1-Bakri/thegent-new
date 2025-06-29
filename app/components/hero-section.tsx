@@ -42,7 +42,7 @@ export default function HeroSection() {
             style={{
               left: `${particle.left}%`,
               top: `${particle.top}%`,
-              backgroundColor: '#94713b',
+              backgroundColor: '#D4AF37',
             }}
             animate={{
               y: [0, -30, 0],
@@ -135,37 +135,67 @@ export default function HeroSection() {
           </motion.div>
         </motion.div>
 
-        {/* Right Content - Profile Image */}
+        {/* Right Content - Profile Image with Gold Frame */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative"
+          className="relative flex justify-center"
         >
           <div className="relative">
-            {/* Glow Effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-2xl blur-3xl" />
+            {/* Outer Gold Glow */}
+            <div className="absolute -inset-8 bg-gradient-to-r from-yellow-400/30 via-yellow-500/40 to-yellow-600/30 rounded-full blur-2xl animate-pulse" />
             
-            {/* Profile Image - Using your uploaded portrait */}
-            <motion.img
-              whileHover={{ scale: 1.02 }}
-              src="/Untitled design (4).png"
-              alt="Omar Al-Bakri"
-              className="relative z-10 w-full max-w-md mx-auto rounded-2xl shadow-2xl"
-            />
+            {/* Gold Frame Container */}
+            <div className="relative">
+              {/* Ornate Gold Frame */}
+              <div className="absolute -inset-6 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 rounded-full p-1 shadow-2xl shadow-yellow-500/50">
+                {/* Inner frame detail */}
+                <div className="absolute inset-2 bg-gradient-to-br from-yellow-300 via-yellow-400 to-yellow-500 rounded-full">
+                  {/* Frame pattern */}
+                  <div className="absolute inset-1 bg-gradient-to-br from-yellow-500 via-yellow-600 to-yellow-700 rounded-full">
+                    <div className="absolute inset-1 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 rounded-full" />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Portrait Image */}
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="relative z-10 w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-yellow-400/50 shadow-2xl"
+              >
+                <img
+                  src="/Untitled design (4).png"
+                  alt="Omar Al-Bakri"
+                  className="w-full h-full object-cover object-center"
+                />
+                
+                {/* Inner glow overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+              </motion.div>
+              
+              {/* Decorative corner elements */}
+              <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-80 animate-pulse" />
+              <div className="absolute -top-4 -right-4 w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-60 animate-pulse" style={{ animationDelay: '0.5s' }} />
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-60 animate-pulse" style={{ animationDelay: '1s' }} />
+              <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-80 animate-pulse" style={{ animationDelay: '1.5s' }} />
+            </div>
             
-            {/* Floating Elements */}
+            {/* Floating Gold Particles */}
             <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="absolute -top-4 -right-4 w-8 h-8 rounded-full opacity-80"
-              style={{ backgroundColor: '#94713b' }}
+              animate={{ y: [0, -15, 0], rotate: [0, 180, 360] }}
+              transition={{ duration: 4, repeat: Infinity }}
+              className="absolute -top-8 -right-8 w-4 h-4 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-70"
             />
             <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2.5, repeat: Infinity, delay: 1 }}
-              className="absolute -bottom-4 -left-4 w-6 h-6 rounded-full opacity-60"
-              style={{ backgroundColor: '#94713b' }}
+              animate={{ y: [0, 15, 0], rotate: [360, 180, 0] }}
+              transition={{ duration: 3.5, repeat: Infinity, delay: 1 }}
+              className="absolute -bottom-8 -left-8 w-3 h-3 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-60"
+            />
+            <motion.div
+              animate={{ x: [0, 20, 0], y: [0, -10, 0] }}
+              transition={{ duration: 5, repeat: Infinity, delay: 2 }}
+              className="absolute top-1/2 -right-12 w-2 h-2 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full opacity-50"
             />
           </div>
         </motion.div>
