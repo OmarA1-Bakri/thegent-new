@@ -146,10 +146,10 @@ export default function HeroSection() {
             {/* Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-2xl blur-3xl" />
             
-            {/* Profile Image */}
+            {/* Profile Image - Using your uploaded portrait */}
             <motion.img
               whileHover={{ scale: 1.02 }}
-              src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="/Untitled design (4).png"
               alt="Omar Al-Bakri"
               className="relative z-10 w-full max-w-md mx-auto rounded-2xl shadow-2xl"
             />
