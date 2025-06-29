@@ -2,13 +2,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+
   const socialLinks = [
     {
       name: "LinkedIn",
       icon: "mdi:linkedin",
-      href: "https:
+      href: "https://linkedin.com/in/omar-al-bakri",
     },
     {
       name: "Email",
@@ -21,26 +23,30 @@ export default function Footer() {
       href: "#",
     },
   ];
+
   const quickLinks = [
     { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
     { name: "Portfolio", href: "#portfolio" },
     { name: "Contact", href: "#contact" },
   ];
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
   return (
     <footer className="relative bg-gradient-to-br from-black via-gray-900 to-black border-t border-cyan-500/20">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
-          {}
+          {/* Brand Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -57,12 +63,14 @@ export default function Footer() {
                 practical growth opportunities. Strategic partnerships in the evolving digital landscape.
               </p>
             </div>
-            {}
+
+            {/* Badge */}
             <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 rounded-full text-xs text-cyan-400/70 backdrop-blur-sm mb-6">
               <Icon icon="solar:cpu-bolt-linear" className="w-3 h-3 mr-1" />
               Binary Baron
             </div>
-            {}
+
+            {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <motion.a
@@ -79,7 +87,8 @@ export default function Footer() {
               ))}
             </div>
           </motion.div>
-          {}
+
+          {/* Quick Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -100,7 +109,8 @@ export default function Footer() {
               ))}
             </ul>
           </motion.div>
-          {}
+
+          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -122,7 +132,8 @@ export default function Footer() {
                 <span className="text-neutral-300 text-sm">Global Remote</span>
               </div>
             </div>
-            {}
+
+            {/* Availability Status */}
             <div className="mt-6 p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/20 rounded-lg">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
@@ -131,7 +142,8 @@ export default function Footer() {
             </div>
           </motion.div>
         </div>
-        {}
+
+        {/* Bottom Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -158,7 +170,7 @@ export default function Footer() {
                 Terms of Service
               </button>
               
-              {}
+              {/* Back to Top */}
               <motion.button
                 onClick={scrollToTop}
                 whileHover={{ scale: 1.1 }}
@@ -171,7 +183,8 @@ export default function Footer() {
           </div>
         </motion.div>
       </div>
-      {}
+
+      {/* Bottom Border */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-50" />
     </footer>
   );

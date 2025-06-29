@@ -2,21 +2,24 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Icon } from "@iconify/react";
+
 export default function PortfolioSection() {
   const [selectedCategory, setSelectedCategory] = useState("all");
+
   const categories = [
     { id: "all", name: "All Projects" },
     { id: "fintech", name: "FinTech" },
     { id: "ai", name: "AI Solutions" },
     { id: "strategy", name: "Strategy" },
   ];
+
   const projects = [
     {
       id: 1,
       title: "Real-Time Payment Gateway",
       category: "fintech",
       description: "Led the development of a next-generation payment processing system handling $1B+ in transactions.",
-      image: "https:
+      image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       tags: ["Payments", "Real-time", "Scalability"],
       metrics: ["$1B+ Processed", "99.99% Uptime", "50ms Latency"],
       link: "#"
@@ -26,7 +29,7 @@ export default function PortfolioSection() {
       title: "AI-Powered Risk Assessment",
       category: "ai",
       description: "Implemented machine learning algorithms to reduce fraud detection time by 85% while improving accuracy.",
-      image: "https:
+      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       tags: ["Machine Learning", "Risk Management", "Automation"],
       metrics: ["85% Faster", "94% Accuracy", "60% Cost Reduction"],
       link: "#"
@@ -36,7 +39,7 @@ export default function PortfolioSection() {
       title: "Digital Banking Transformation",
       category: "strategy",
       description: "Orchestrated complete digital transformation for a traditional bank, resulting in 300% customer growth.",
-      image: "https:
+      image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       tags: ["Digital Transformation", "Customer Experience", "Growth"],
       metrics: ["300% Growth", "40% Cost Savings", "95% Satisfaction"],
       link: "#"
@@ -46,7 +49,7 @@ export default function PortfolioSection() {
       title: "Cross-Border Payment Solution",
       category: "fintech",
       description: "Designed and launched a revolutionary cross-border payment platform reducing settlement time from days to minutes.",
-      image: "https:
+      image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       tags: ["Cross-border", "Settlement", "Innovation"],
       metrics: ["Minutes Settlement", "75% Cost Reduction", "150+ Countries"],
       link: "#"
@@ -56,7 +59,7 @@ export default function PortfolioSection() {
       title: "Predictive Analytics Platform",
       category: "ai",
       description: "Built an AI platform that predicts market trends with 92% accuracy, enabling proactive business decisions.",
-      image: "https:
+      image: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       tags: ["Predictive Analytics", "Market Intelligence", "Decision Support"],
       metrics: ["92% Accuracy", "Real-time Insights", "25% ROI Increase"],
       link: "#"
@@ -66,22 +69,24 @@ export default function PortfolioSection() {
       title: "Enterprise Sales Optimization",
       category: "strategy",
       description: "Revolutionized sales processes using AI and data analytics, resulting in 150% increase in conversion rates.",
-      image: "https:
+      image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       tags: ["Sales Optimization", "Data Analytics", "Process Improvement"],
       metrics: ["150% Conversion", "35% Faster Cycles", "$50M+ Revenue"],
       link: "#"
     }
   ];
+
   const filteredProjects = selectedCategory === "all" 
     ? projects 
     : projects.filter(project => project.category === selectedCategory);
+
   return (
     <section id="portfolio" className="relative py-20 overflow-hidden">
-      {}
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        {}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +106,8 @@ export default function PortfolioSection() {
             FinTech expertise with AI innovation.
           </p>
         </motion.div>
-        {}
+
+        {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -129,7 +135,8 @@ export default function PortfolioSection() {
             </div>
           </div>
         </motion.div>
-        {}
+
+        {/* Projects Grid */}
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedCategory}
@@ -149,7 +156,7 @@ export default function PortfolioSection() {
                 className="group"
               >
                 <div className="bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300">
-                  {}
+                  {/* Project Image */}
                   <div className="relative overflow-hidden">
                     <img
                       src={project.image}
@@ -158,12 +165,13 @@ export default function PortfolioSection() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     
-                    {}
+                    {/* Hover Icon */}
                     <div className="absolute top-4 right-4 w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <Icon icon="solar:eye-linear" className="w-5 h-5 text-white" />
                     </div>
                   </div>
-                  {}
+
+                  {/* Project Content */}
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                       {project.title}
@@ -172,7 +180,8 @@ export default function PortfolioSection() {
                     <p className="text-neutral-300 text-sm mb-4 leading-relaxed">
                       {project.description}
                     </p>
-                    {}
+
+                    {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tags.map((tag, tagIndex) => (
                         <span
@@ -183,7 +192,8 @@ export default function PortfolioSection() {
                         </span>
                       ))}
                     </div>
-                    {}
+
+                    {/* Metrics */}
                     <div className="space-y-2 mb-4">
                       {project.metrics.map((metric, metricIndex) => (
                         <div key={metricIndex} className="flex items-center space-x-2">
@@ -192,7 +202,8 @@ export default function PortfolioSection() {
                         </div>
                       ))}
                     </div>
-                    {}
+
+                    {/* View Details Button */}
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -206,7 +217,8 @@ export default function PortfolioSection() {
             ))}
           </motion.div>
         </AnimatePresence>
-        {}
+
+        {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -2,6 +2,7 @@
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
+
 export default function HeroSection() {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -9,6 +10,7 @@ export default function HeroSection() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   const downloadCV = () => {
     const link = document.createElement("a");
     link.href = "/cv.pdf";
@@ -25,12 +27,13 @@ export default function HeroSection() {
       duration: 3 + (i % 3),
     }));
   }, []);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {}
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
       
-      {}
+      {/* Animated Particles */}
       <div className="absolute inset-0">
         {particles.map((particle) => (
           <motion.div
@@ -53,16 +56,17 @@ export default function HeroSection() {
           />
         ))}
       </div>
-      {}
+
+      {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-        {}
+        {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center lg:text-left"
         >
-          {}
+          {/* Logo */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -70,12 +74,13 @@ export default function HeroSection() {
             className="mb-8"
           >
             <img
-              src="https:
+              src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&dpr=1"
               alt="TheGent.uk Logo"
               className="h-16 md:h-20 mx-auto lg:mx-0 object-contain"
             />
           </motion.div>
-          {}
+
+          {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -90,7 +95,8 @@ export default function HeroSection() {
               Sales Leader
             </span>
           </motion.h1>
-          {}
+
+          {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -100,7 +106,8 @@ export default function HeroSection() {
             Transforming complex financial technology into sustainable growth opportunities.
             Strategic partnerships in the evolving AI landscape.
           </motion.p>
-          {}
+
+          {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -127,7 +134,8 @@ export default function HeroSection() {
             </motion.button>
           </motion.div>
         </motion.div>
-        {}
+
+        {/* Right Content - Profile Image */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -135,18 +143,18 @@ export default function HeroSection() {
           className="relative"
         >
           <div className="relative">
-            {}
+            {/* Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-2xl blur-3xl" />
             
-            {}
+            {/* Profile Image */}
             <motion.img
               whileHover={{ scale: 1.02 }}
-              src="https:
+              src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Omar Al-Bakri"
               className="relative z-10 w-full max-w-md mx-auto rounded-2xl shadow-2xl"
             />
             
-            {}
+            {/* Floating Elements */}
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity }}
@@ -162,7 +170,8 @@ export default function HeroSection() {
           </div>
         </motion.div>
       </div>
-      {}
+
+      {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
+
 export default function AboutSection() {
   const skills = [
     { name: "FinTech Solutions", icon: "solar:card-linear", level: 95 },
@@ -11,22 +12,24 @@ export default function AboutSection() {
     { name: "Business Development", icon: "solar:graph-up-linear", level: 88 },
     { name: "Tech Innovation", icon: "solar:lightbulb-linear", level: 85 },
   ];
+
   return (
     <section id="about" className="relative py-20 overflow-hidden">
-      {}
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900" />
       
-      {}
+      {/* Neon background overlay */}
       <div className="absolute inset-0 opacity-10">
         <img
-          src="https:
+          src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="Neon Background"
           className="w-full h-full object-cover"
         />
       </div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {}
+          {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -46,6 +49,7 @@ export default function AboutSection() {
               <br />
               <span className="text-white">The Gent</span>
             </motion.h2>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -72,7 +76,8 @@ export default function AboutSection() {
                 &apos;Binary Baron&apos; - a playful reference to my enthusiasm for digital solutions.
               </p>
             </motion.div>
-            {}
+
+            {/* Social Links */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -83,7 +88,7 @@ export default function AboutSection() {
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                href="https:
+                href="https://linkedin.com/in/omar-al-bakri"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 rounded-full text-cyan-400 hover:bg-cyan-500/30 transition-all duration-300"
@@ -101,7 +106,8 @@ export default function AboutSection() {
               </motion.a>
             </motion.div>
           </motion.div>
-          {}
+
+          {/* Right Content - Skills */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -141,7 +147,8 @@ export default function AboutSection() {
                 </motion.div>
               ))}
             </div>
-            {}
+
+            {/* Stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
