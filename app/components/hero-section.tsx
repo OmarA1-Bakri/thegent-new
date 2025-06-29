@@ -66,25 +66,11 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
           className="text-center lg:text-left"
         >
-          {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mb-8"
-          >
-            <img
-              src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&dpr=1"
-              alt="TheGent.uk Logo"
-              className="h-16 md:h-20 mx-auto lg:mx-0 object-contain"
-            />
-          </motion.div>
-
           {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.2 }}
             className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
           >
             <span className="bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent">
@@ -100,7 +86,7 @@ export default function HeroSection() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.4 }}
             className="text-lg text-neutral-300 mb-8 max-w-lg mx-auto lg:mx-0"
           >
             Transforming complex financial technology into sustainable growth opportunities.
@@ -111,7 +97,7 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
+            transition={{ delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           >
             <motion.button
@@ -199,7 +185,7 @@ export default function HeroSection() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
+        transition={{ delay: 1.2 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <motion.div
